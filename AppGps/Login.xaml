@@ -7,6 +7,25 @@
             <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
                 <Image Source="https://casasuertes.com/wp-content/uploads/2015/01/parking.jpg" HeightRequest="100" HorizontalOptions="Center"/>
             </Frame>
+
+            
+            <Entry x:Name="txtUsuario" Placeholder="Usuario " />
+            <Entry x:Name="txtPassword" Placeholder="Ingrese el password" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Button x:Name="btnIngresar" Text="Login" Clicked="btnIngresar_Clicked" Grid.Row="0" Grid.Column="0"/>
+            
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
