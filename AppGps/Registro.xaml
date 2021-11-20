@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGps.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="texto" Text=""/>
+            <Button Text="Consultar" x:Name="btnGet" Clicked="btnGet_Clicked" />
+            <ListView x:Name="MyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout>
+                                <Label x:Name="lblnombre" Text="{Binding nombres}"/>
+                                <Label x:Name="lblapellido" Text="{Binding apellidos}"/>
+                                <Label x:Name="correo" Text="{Binding correo}"/>
+                                <Label x:Name="usuario" Text="{Binding usuario}"/>
+                                <Label x:Name="contrasena" Text="{Binding contrasena}"/>
+                                <Label x:Name="placa" Text="{Binding placa}"/>
+                                <Label x:Name="modelo" Text="{Binding modelo}"/>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

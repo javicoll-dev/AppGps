@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGps.MainPage">
+    <ContentPage.Content>
+       
+        
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
+                <Image Source="https://casasuertes.com/wp-content/uploads/2015/01/parking.jpg" HeightRequest="100" HorizontalOptions="Center"/>
+
+            </Frame>
+
+
+            
+        <Label Text="Parqueaderos disponibles Centro de Quito " HorizontalTextAlignment="Center" TextColor="Azure"/>
+        <Label Text="/ Available Parkings - Center Quito " HorizontalTextAlignment="Center"/>
+            
+
+
+
+            <ListView x:Name="MyListView" HasUnevenRows="True" ItemTapped="MyListView_ItemTapped" BackgroundColor="WhiteSmoke">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblestablecimiento" Text="{Binding establecimiento}" TextColor="Black" FontAttributes="Bold" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+                                <Image Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Source="auto.jpeg" Aspect="AspectFill" HeightRequest="60" WidthRequest="60"/>
+
+                                <Label Grid.Row="1" Grid.Column="0" x:Name="lbldireccion" Text="{Binding direccion}" TextColor="Black"/>
+                                <Label Grid.Row="2" Grid.Column="0" x:Name="lblhorario" Text="{Binding Horario}" TextColor="Black"/>
+                                <Label x:Name="lblLatitud" Text="{Binding latitud}" IsVisible="False"/>
+                                <Label x:Name="lblLongitud" Text="{Binding longitud}" IsVisible="False"/>
+
+
+
+
+                            </Grid>
+                        
+                        
+                        
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
