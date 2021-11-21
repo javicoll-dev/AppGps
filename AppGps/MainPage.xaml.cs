@@ -38,7 +38,7 @@ namespace AppGps
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", "ERROR" + ex.Message, "OK");
+                await DisplayAlert("Error", "ERROR" + ex.Message, "OK");
             }
 
         }
@@ -67,6 +67,11 @@ namespace AppGps
                 NavigationMode = NavigationMode.None
 
             });
+        }
+
+        private async void btnSalir_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login());
         }
     }
 }

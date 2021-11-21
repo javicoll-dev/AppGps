@@ -23,7 +23,12 @@
             </Grid>
 
             <Button x:Name="btnIngresar" Text="Login" Clicked="btnIngresar_Clicked" Grid.Row="0" Grid.Column="0"/>
+
+
             
+
+            <Button x:Name="btnRegistrar" Text="Registrese aqui" BackgroundColor="#2196F3" TextColor="Black" Clicked="btnRegistrar_Clicked"/>
+
 
 
         </StackLayout>

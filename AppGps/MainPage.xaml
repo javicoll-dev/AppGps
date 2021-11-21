@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppGps.MainPage">
+             x:Class="AppGps.MainPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
        
         
@@ -56,7 +57,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        
-    </StackLayout>
+            <Button x:Name="btnSalir" Text="salir" Clicked="btnSalir_Clicked" BackgroundColor="#2196F3" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

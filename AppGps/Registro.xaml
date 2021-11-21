@@ -4,28 +4,55 @@
              x:Class="AppGps.Registro">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="texto" Text=""/>
-            <Button Text="Consultar" x:Name="btnGet" Clicked="btnGet_Clicked" />
-            <ListView x:Name="MyListView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+            <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
+                <Image Source="https://casasuertes.com/wp-content/uploads/2015/01/parking.jpg" HeightRequest="100" HorizontalOptions="Center"/>
+            </Frame>
 
-                            <StackLayout>
-                                <Label x:Name="lblnombre" Text="{Binding nombres}"/>
-                                <Label x:Name="lblapellido" Text="{Binding apellidos}"/>
-                                <Label x:Name="correo" Text="{Binding correo}"/>
-                                <Label x:Name="usuario" Text="{Binding usuario}"/>
-                                <Label x:Name="contrasena" Text="{Binding contrasena}"/>
-                                <Label x:Name="placa" Text="{Binding placa}"/>
-                                <Label x:Name="modelo" Text="{Binding modelo}"/>
-                                
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Label Text="REGISTRO DE USUARIOS" HorizontalOptions="CenterAndExpand" Grid.Column="0"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Entry x:Name="txtNombres" Placeholder="Ingrese los Nombres" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtApellidos" Placeholder="Ingrese los Apellidos" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtCorreo" Placeholder="Ingrese el Correo" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese el Usuario" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="txtContrasena" Placeholder="Ingrese la Contrasena" Grid.Row="4" Grid.Column="0"/>
+
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>                    
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Label Text="DATOS DEL VEHICULO" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtPlaca" Placeholder="Ingrese la placa del vehiculo" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtModelo" Placeholder="Ingrese el modelo del vehiculo" Grid.Row="2" Grid.Column="0"/>
+
+            <Button x:Name="btnGuardar" Text="guardar" BackgroundColor="#2196F3" TextColor="Black" Clicked="btnGuardar_Clicked"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
