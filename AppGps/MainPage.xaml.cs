@@ -22,6 +22,7 @@ namespace AppGps
         public MainPage()
         {
             InitializeComponent();
+            DisplayAlert("Bienvenida", "Hola "+Login.Json.nombres +" " +Login.Json.apellidos, "Aceptar");
             get();
         }
 

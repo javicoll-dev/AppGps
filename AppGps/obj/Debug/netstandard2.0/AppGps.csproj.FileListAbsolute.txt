@@ -15,3 +15,4 @@ C:\U-ISRAEL-CARRERA\Desarrollo Movil\AppGps\AppGps\obj\Debug\netstandard2.0\AppG
 C:\U-ISRAEL-CARRERA\Desarrollo Movil\AppGps\AppGps\obj\Debug\netstandard2.0\ref\AppGps.dll
 C:\U-ISRAEL-CARRERA\Desarrollo Movil\AppGps\AppGps\obj\Debug\netstandard2.0\AppGps.pdb
 C:\U-ISRAEL-CARRERA\Desarrollo Movil\AppGps\AppGps\obj\Debug\netstandard2.0\AppGps.csproj.AssemblyReference.cache
+C:\U-ISRAEL-CARRERA\Desarrollo Movil\AppGps\AppGps\obj\Debug\netstandard2.0\Recuperar.xaml.g.cs

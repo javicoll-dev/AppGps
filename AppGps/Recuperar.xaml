@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGps.Recuperar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="12" CornerRadius="0">
+                <Image Source="https://casasuertes.com/wp-content/uploads/2015/01/parking.jpg" HeightRequest="100" HorizontalOptions="Center"/>
+            </Frame>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Label Text="RECUPERAR CONTRASEÑA" HorizontalOptions="CenterAndExpand" Grid.Column="0"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Entry x:Name="txtEmail" Placeholder="Ingrese su correo electronico" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtPassword" Placeholder="Ingrese la nueva clave" Grid.Row="1" Grid.Column="0"/>
+
+            <Button x:Name="btnRecuperar" Text="Recuperar" BackgroundColor="#2196F3" TextColor="Black" Clicked="btnRecuperar_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

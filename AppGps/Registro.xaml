@@ -30,11 +30,11 @@
                 </Grid.ColumnDefinitions>
             </Grid>
 
-            <Entry x:Name="txtNombres" Placeholder="Ingrese los Nombres" Grid.Row="0" Grid.Column="0"/>
-            <Entry x:Name="txtApellidos" Placeholder="Ingrese los Apellidos" Grid.Row="1" Grid.Column="0"/>
-            <Entry x:Name="txtCorreo" Placeholder="Ingrese el Correo" Grid.Row="2" Grid.Column="0"/>
-            <Entry x:Name="txtUsuario" Placeholder="Ingrese el Usuario" Grid.Row="3" Grid.Column="0"/>
-            <Entry x:Name="txtContrasena" Placeholder="Ingrese la Contrasena" Grid.Row="4" Grid.Column="0"/>
+            <Entry x:Name="txtNombres" Placeholder="Ingrese los Nombres" Grid.Row="0" Grid.Column="0" Keyboard="Text"/>
+            <Entry x:Name="txtApellidos" Placeholder="Ingrese los Apellidos" Grid.Row="1" Grid.Column="0" Keyboard="Text"/>
+            <Entry x:Name="txtCorreo" Placeholder="Ingrese el Correo" Grid.Row="2" Grid.Column="0" Keyboard="Email"/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese el Usuario" Grid.Row="3" Grid.Column="0" Keyboard="Text"/>
+            <Entry x:Name="txtContrasena" Placeholder="Ingrese la Contrasena" Grid.Row="4" Grid.Column="0" IsPassword="True"/>
 
             
             <Grid>
@@ -51,7 +51,7 @@
             <Entry x:Name="txtPlaca" Placeholder="Ingrese la placa del vehiculo" Grid.Row="1" Grid.Column="0"/>
             <Entry x:Name="txtModelo" Placeholder="Ingrese el modelo del vehiculo" Grid.Row="2" Grid.Column="0"/>
 
-            <Button x:Name="btnGuardar" Text="guardar" BackgroundColor="#2196F3" TextColor="Black" Clicked="btnGuardar_Clicked"/>
+            <Button x:Name="btnGuardar" Text="GUARDAR" BackgroundColor="#2196F3" TextColor="Black" Clicked="btnGuardar_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

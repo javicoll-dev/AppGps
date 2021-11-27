@@ -17,9 +17,10 @@ namespace AppGps
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        private const string url = "http://192.168.100.33/api/usuario/post.php";
+        //private const string url = "http://192.168.100.33/api/usuario/post.php";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<AppGps.Ws.Usuarios> _usuario;
+        //private ObservableCollection<AppGps.Ws.Usuarios> _usuario;
+        public static AppGps.Ws.Usuarios Json { get; set; }
         //private List<Login> MyList = new List<Login>;
         public Login()
         {
@@ -31,12 +32,8 @@ namespace AppGps
         {
 
 
-            /*var content = await client.GetStringAsync(url);
-            List<AppGps.Ws.Usuarios> lista = JsonConvert.DeserializeObject<List<AppGps.Ws.Usuarios>>(content);
-            _usuario = new ObservableCollection<AppGps.Ws.Usuarios>(lista);
-
-            MyList = _usuario;*/
-            Uri requestUri = new Uri("http://192.168.100.33/api/usuario/post.php");
+            
+            Uri requestUri = new Uri("http://192.168.100.33/api/usuario/post.php?correo="+txtUsuario.Text+"&contrasena="+txtPassword.Text+"");
 
             Usuarios login = new Usuarios 
             {
@@ -44,18 +41,34 @@ namespace AppGps
                 contrasena = txtPassword.Text
             };
 
-            var json = JsonConvert.SerializeObject(login);
-            var contentJson = new StringContent(json,Encoding.UTF8, "aplication/json");
-            var response = await client.PostAsync(requestUri, contentJson);
 
-            if (response.StatusCode == HttpStatusCode.OK)
+            //var resultado = await client.GetAsync(String.Concat(requestUri, login.usuario, login.contrasena));
+            var resultado = await client.GetAsync(requestUri);
+
+            if (resultado.IsSuccessStatusCode)
             {
-                await Navigation.PushAsync(new MainPage());
+                string PlacesJson = resultado.Content.ReadAsStringAsync().Result;
+                if (PlacesJson.Length > 10) 
+                {
+
+                    Json = JsonConvert.DeserializeObject<AppGps.Ws.Usuarios>(PlacesJson);
+                    await Navigation.PushAsync(new MainPage());
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Usuario no encontrado", "OK");
+
+                }
+                
             }
-            else
-            {
-                await DisplayAlert("Error", "Sus credenciales son invalidas", "OK");
-            }
+            
+
+
+
+           
+            
+
+           
         }
 
         private async void btnRegistrar_Clicked(object sender, EventArgs e)
@@ -67,6 +80,11 @@ namespace AppGps
         {
             txtUsuario.Text = "";
             txtPassword.Text = "";
+        }
+
+        private async void btnRecuperar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Recuperar());
         }
     }
 }

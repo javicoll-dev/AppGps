@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppGps.Ws
 {
-    class Usuarios
+    public class Usuarios
     {
         public int id { get; set; }
         public string nombres { get; set; }

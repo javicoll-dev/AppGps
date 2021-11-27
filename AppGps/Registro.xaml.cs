@@ -44,7 +44,7 @@ namespace AppGps
 
 
                 cliente.UploadValues("http://192.168.100.33/api/usuario/post.php", "POST", parametros);
-                await DisplayAlert("Mesaje", "El registro exitoso", "OK");
+                await DisplayAlert("Mensaje", "El registro exitoso", "OK");
 
                 await Navigation.PushAsync(new Login());
 
